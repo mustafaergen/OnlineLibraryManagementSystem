@@ -1,0 +1,24 @@
+﻿
+@model List<Book>
+<h1>Book List</h1>
+<hr />
+<div class="container">
+    <div class="row"></div>
+    <table class="table table-hover">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Published Year</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Author</td>
+                <td>@item.Category</td>
+                <td>@item.PublishedYear</td>
+            </tr>
+        }
+    </table>
+</div>

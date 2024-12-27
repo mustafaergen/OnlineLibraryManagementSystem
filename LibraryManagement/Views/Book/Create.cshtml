@@ -1,0 +1,51 @@
+﻿@model List<Book>
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container">
+    <div class="row"></div>
+    <table class="table table-hover">
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Published Year</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Title</td>
+                <td>@item.Author</td>
+                <td>@item.Category</td>
+                <td>@item.PublishedYear</td>
+            </tr>
+        }
+    </table>
+</div>
+<div class="row">
+    &nbsp;
+</div>
+<div class="row">
+    <h2>Add Book</h2>
+</div>
+<form method="post">
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" placeholder="Title" aria-label="Title" name="title" required>
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" placeholder="Author" aria-label="Author" name="author" required>
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" placeholder="Category" aria-label="Category" name="category" required>
+    </div>
+    <div class="col">
+        <input type="text" class="form-control" placeholder="PublishedYear" aria-label="PublishedYear" name="publishedYear" required>
+    </div>
+    <div class="col-2">
+        <input type="submit" class="btn btn-success" value="Add" />
+    </div>
+</div>
+</form>

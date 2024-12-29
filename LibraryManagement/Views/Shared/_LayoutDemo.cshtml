@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <style>
+        header,footer{
+            text-align:center;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LibraryManagement.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="bg-dark text-white p-3 mb-4">
+        <div class="container">
+            <h1>@ViewData["Title"]</h1>
+            <p>Welcome to the library management system</p>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/Custom-Icon-Design-Mono-General-3-Home.24.png" />Home Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Book" asp-action="Index"><img src="~/images/Robinweatherall-Library-Books.24.png" />Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Category" asp-action="Index"><img src="~/images/Fatcow-Farm-Fresh-Category.24.png" />Categories</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <main class="col-lg-8">
+                <div class="content">
+                    @RenderBody()
+                </div>
+            </main>
+            <aside class="col-lg-4">
+                <div class="sidebar">
+                    <h4>Book Categories</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">Edebiyat</li>
+                        <li class="list-group-item">Roman</li>
+                        <li class="list-group-item">Tarih</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p>&copy; 2024 Library Management System. All rights reserved.</p>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

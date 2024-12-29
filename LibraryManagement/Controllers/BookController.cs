@@ -20,6 +20,7 @@ namespace LibraryManagement.Controllers
             new Categories() {Id=1,CategoryName="Edebiyat"},
             new Categories() {Id=2,CategoryName="Roman"},
             new Categories() {Id=3,CategoryName="Tarih"},
+            new Categories() {Id=4,CategoryName="Politik"},
         };
         public BookController()
         {

@@ -8,10 +8,11 @@ namespace LibraryManagement.Controllers
     {
         private static readonly IList<Categories> categories = new List<Categories>()
         {
-        new Categories() {Id = 1, CategoryName = "Edebiyat"},
-        new Categories() {Id = 2, CategoryName = "Roman"},
-        new Categories() {Id = 3, CategoryName = "Tarih"},
-        new Categories() {Id = 4, CategoryName = "Politik"},
+        new Categories() { Id = 1, CategoryName = "Edebiyat", Description = "Edebiyat ve sanatla ilgili kitaplar." },
+        new Categories() { Id = 2, CategoryName = "Roman", Description = "Kurgu ve hikaye anlatan kitaplar." },
+        new Categories() { Id = 3, CategoryName = "Tarih", Description = "Geçmiş olaylar ve tarihsel gelişmelerle ilgili kitaplar." },
+        new Categories() { Id = 4, CategoryName = "Politik", Description = "Siyaset, yönetim ve toplumsal düzenle ilgili kitaplar." },
+
         };
 
         public IActionResult Index()
